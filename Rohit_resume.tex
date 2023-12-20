@@ -1,0 +1,217 @@
+
+%% Rohit Avadhani resume
+%----------------------------------------------------------------------------------------
+%  Packages And Other Document Configurations
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+% Document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+
+% Color and hyperlink packages
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Footnote and margin adjustment packages
+\usepackage{footnote}
+\usepackage{changepage}
+
+% Fontawesome package for icons
+\usepackage{fontawesome}
+
+% Tabularx package for custom tables
+\usepackage{tabularx}
+
+% Define navyblue color
+\definecolor{navyblue}{RGB}{0,54,123}
+
+%----------------------------------------------------------------------------------------
+%   Customizations
+%----------------------------------------------------------------------------------------
+
+% Define italicitem, bolditem, and plainitem commands
+\newcommand{\italicitem}[1]{\item{\textit{#1}}}
+\newcommand{\bolditem}[1]{\item{\textbf{#1}}}
+\newcommand{\plainitem}[1]{\item{#1}}
+
+% Define user-friendly link command for hyperlinks
+\newcommand{\link}[2]{{\href{#1}{#2}}}
+
+\newcommand{\entry}[2]{#1 & #2 \tabularnewline} % Defines an entry with two arguments: #1 for the first column and #2 for the second column
+
+%----------------------------------------------------------------------------------------
+%   Define envsection command for defining a new environment section
+%----------------------------------------------------------------------------------------
+
+\newcommand{\tableEnv}[2]{%
+  \begin{rSection}{#1} % Begin rSection with the given name
+    \begin{adjustwidth}{0.0in}{0.1in} % Set the left and right margins
+      \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{6ex}} X @{}}
+        #2 % Print the content inside the tabularx environment
+      \end{tabularx}
+    \end{adjustwidth}
+  \end{rSection}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%   Begin document
+%----------------------------------------------------------------------------------------
+
+% Set name with navyblue color
+\name{\color{navyblue} Rohit Avadhani}
+
+\begin{document}
+
+\printPersonalInfo{
+  \personalInfo{\tag{E-mail}\info{rohit.avadhani@gmail.com} \infoSeparator\tag{Telephone number}\info{+44-7732974847}}
+  
+}
+
+%----------------------------------------------------------------------------------------
+%   Work experience section
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work experience}
+
+    % First work experience entry
+    \begin{rSubsection}{KTP Associate - Queen's University of Belfast and WD Meats}{November 2022 - On Going }{Process Improvement and Automation Lead}{Belfast, Northern Ireland}
+       \item  Embedded real-time process control using C++ on Ubuntu 20.04 with a focus on HMI integration, achieving lean manufacturing metrics such as cycle time and scrap as \% VOP.
+        \item Parametric designs for gut trays on the kill floor and digital twin design on Unity AR leading to a decrease of 1 week in total planning hours.
+        \item Integrated and managed small scale SCADA for condition monitoring for kill floor motors with focus on predictive maintenance.
+        \item Bespoke Inventory management architecture design and built using .Net Framework and SQL, modelled to forecast buyer needs and production that helps improve slaughter line based on orders and sales from last month. 
+        \item Data acquisition through SQL and developed a .net application on C\# for capturing and visualizing insights on  data as well as monitoring progress on the production line for Senior management and the Floor supervisors.
+        % \item Integrated and managed small scale visualization for condition monitoring for kill floor motors with focus on predictive maintenance.       
+        \item Develop and document New Process/Product Introduction (NPI) processes that bring together the key elements of process/value stream mapping, digital simulation modelling, costing/business case generation and the support required for shop floor implementation
+        
+        
+    \end{rSubsection}
+
+     % Fourth work experience entry
+    \begin{rSubsection}{Graduate Student}{September 2021 - September 2022}{Robotics and AI MS}{Glasgow, UK}
+        % \item Team lead for Digital Signal Processing project on Proximity Alarm using C++, Raspberry pi 4 and RGB sensors. 
+        
+        \item Team lead - Robotics Soccer Simulation using MATLAB, C++ and Simulink. 6 v 6 football game with one team on Fuzzy logic and the other team on Brute force algorithms. 
+
+        \item Parameter Identification of a Compliant 3D printed Damper using Piezo electric sensors, data acquisition using NIDAQ and ABABUS 9000, analysis on MATLAB.
+    \end{rSubsection}
+
+   
+
+     %Second work experience entry
+    % \begin{rSubsection}{Sophie M Clarie Cricket Agency}{March 2021 - September 2021}{Analytics and Research Intern}{Remote}
+    %         \item Analyze player and team performance across US open cricket and UK premier leagues based on win rate, strike rate, and player averages by accessing databases across the Internet.
+    % \item Built a GUI and dashboard using python and Power BI for visualizing player performance that helped to improve communication with potential clients and teams.
+    % \item Communicating with team captains, secretaries, and owners as an agent and a representative of clients to highlight their attributes and marketability.
+    % \end{rSubsection}
+    
+    % Third work experience entry
+    \begin{rSubsection}{Amazon Robotics}{December 2019 - January 2021}{Solutions Design Engineer}{Massachusetts, USA}
+        \item Part of the EU-APAC team leading contractors and engineers into deploying Amazon fulfiment centers in EU. 
+\item Scripting using python to improve designing and budgeting on AutoCAD, Mapeditor and excel which lead to a higher deployment speeds. 
+    \end{rSubsection}
+    
+    % Fourth work experience entry
+    \begin{rSubsection}{Fusion Tech Inc}{October 2018 - December 2019}{Mechanical Design Engineer}{Illinois, USA}
+        % \item Team lead for Digital Signal Processing project on Proximity Alarm using C++, Raspberry pi 4 and RGB sensors. 
+        
+        \item Project lead - Vertical conveyor and grading production line for meat processing. Designed and delivered production worth over 100000£ within the time limit set by the project manager
+
+        \item Working with stakeholders to identify the area of improvement and produce a 20\% reduction in labour while upping the efficiency of the line through automation.
+    \end{rSubsection}
+    
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%   Education section
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+    % Master's degree entry
+    \begin{rSubsectionNoBullet}{\bf MS Robotics and AI}{University of Glasgow}{Emphasis on PINN for Vibration Analysis}{September 2021 - September 2022}
+        
+        \italicitem{Thesis title:Parameter Identification of a Compliant 3D printed Dynamic Damper for Soft Robotics }
+    \end{rSubsectionNoBullet}
+    
+    % Bachelor's degree entry
+    \begin{rSubsectionNoBullet}{\bf MS Aerospace Engineering}{University of Texas at Arlington}{Emphasis on Composite modelling and design}{January 2016 - December 2017}
+        
+        \italicitem{Thesis Title: Comparative Study Between Wooden and Hybrid Composites on Crossarms}
+    \end{rSubsectionNoBullet}
+    
+    % High School diploma entry
+    \begin{rSubsectionNoBullet}{\bf BTech Aerospace Engineering}{SRM University}{Emphasis on CFD }{August 2011 - June 2015}
+
+        \italicitem{Senior project: Design and Development of water propelled resistojet}
+    \end{rSubsectionNoBullet}
+
+\end{rSection}
+
+
+
+%----------------------------------------------------------------------------------------
+%   Extracurricular activities section
+%----------------------------------------------------------------------------------------
+%
+% \begin{rSection}{Extracurricular activities}
+
+% % First extracurricular entry
+% \begin{rSubsectionNoBullet}{Procrastinators Anonymous: Machine Learning for Laziness}{November 2015}{Successfully delayed attending the course}{Rome, Italy}
+%     \plainitem{Developed an AI that predicts the perfect moment to start binge-watching Dr. House episodes instead of working on important tasks.}
+% \end{rSubsectionNoBullet}
+
+% % Third extracurricular entry
+% \begin{rSubsectionNoBullet}{Dumb Literature Club: Famous Books with Ridiculous Twists}{June 2014 - Present}{Proud Member}{Popejoy, Iowa}
+%     \plainitem{Regularly participate in discussions concerning famous literature works, such as "The Great Catsby", which is basically the Great Gatsby, but with cats.}
+% \end{rSubsectionNoBullet}
+
+% \end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Technical skills section
+%----------------------------------------------------------------------------------------
+
+\tableEnv{Technical skills}{
+    \entry{Programming Languages/Tools}{C++, Python, \LaTeX, MATLAB,Ladder Logic Programming, Emulator based RSLogix500, Ubuntu (Linux Distribution Pkg}
+    \entry{CAD Technologies}{SolidWorks, Visual Components, Gazebo, Ansys}
+    \entry{Technologies}{SQL, NOSQL, ROS, ROS2, Tensorflow, Pytorch, AWS,PowerBI}
+    
+    \entry{\href{https://github.com/RoboKafka}{RoboKafka on GitHub}}
+    
+
+}
+\end{document}
+
+
+%----------------------------------------------------------------------------------------
+% Language proficiencies section
+%----------------------------------------------------------------------------------------
+
+% \tableEnv{Language proficiencies}{
+%     \entry{English}{Fluent in Shakespearean insults}
+%     \entry{French}{Proficient in baguette related jokes}
+% }
+
+%----------------------------------------------------------------------------------------
+% Most relevant projects section
+%----------------------------------------------------------------------------------------
+
+% \tableEnv{Portfolio of most relevant projects}{
+%     \entry{Survey}{Analyzing the effects of replacing office chairs with unicycles on employee morale}
+%     \entry{Survey}{Investigation of the therapeutic effects of watching cat videos for 8 hours a day}
+%     \entry{Paper}{The correlation between sock loss in laundry and the existence of parallel universes}
+%     \entry{Article}{The definitive study on the impact of pineapple as a pizza topping on global diplomacy}
+% }
+
+%----------------------------------------------------------------------------------------
+% Memberships section
+%----------------------------------------------------------------------------------------
+
+% \tableEnv{Memberships}{
+%     \entry{Couch Potatoes Anonymous}{A support group for those addicted to binge-watching TV shows}
+%     \entry{Procrastinators' Club}{A group that will eventually get around to doing something, someday}
+% }
+
+% \end{document}
